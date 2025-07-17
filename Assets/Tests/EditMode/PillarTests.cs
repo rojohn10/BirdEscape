@@ -82,6 +82,8 @@ public class PillarTests
         Assert.AreEqual(1f, pillarObject.transform.position.x);
     }
 
+
+    //--*** Uncomment after fixing the Update method in Pillar ***--
     //[Test]
     //public void Update_DestroysPillar_WhenOffScreen()
     //{

@@ -57,6 +57,7 @@ public class GameControllerTests
         Assert.AreEqual(initialCount + 1, newCount);
     }
 
+    //--*** will be enabled after fixing the Update method in GameController ***--
     //[Test]
     //public void Update_SpawnsPillarAfterFrequencyFrames()
     //{

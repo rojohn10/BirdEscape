@@ -2,32 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public class FloorScript : MonoBehaviour
-//{
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-
-//    }
-
-//    // Update is called once per frame
-//    void Update()
-//    {
-//        if (Time.timeScale == 1)
-//        {
-//            transform.Translate(-0.08f, 0, 0);
-//        }
-
-//        if (transform.position.x <= -5.32f)
-//        {
-//            Vector2 vector2 = transform.position;
-//            vector2.x = 0;
-//            transform.position = vector2;
-//        }
-//    }
-//}
-
-
 /// <summary>
 /// Handles the floor's movement and looping behavior.
 /// </summary>

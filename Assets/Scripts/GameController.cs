@@ -2,53 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public class GameController : MonoBehaviour
-//{
-//    public Bird bird; 
-//    public Pillar pillar;
-//    public static GameController main;
-//    public int frequency;
-
-//    private void Awake()
-//    {
-//        // Ensure that there is only one instance of GameController
-//        if (main == null)
-//        {
-//            main = this;
-//            Application.targetFrameRate = 60; // Set the target frame rate
-//        }
-//        else if (main != this)
-//        {
-//            Destroy(gameObject);
-//        }
-//    }
-
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-
-//    }
-
-//    public void SpawnPillar()
-//    {
-//        Object.Instantiate(pillar);
-//    }
-
-//    int frameCounter = 0; // Frame counter for pillar spawning
-
-//    // Update is called once per frame
-//    void Update()
-//    {
-//        frameCounter++;
-
-//        if (frameCounter == frequency && Time.timeScale == 1)
-//        {
-//            SpawnPillar();
-//            frameCounter = 0; // Reset frame counter
-//        }
-//    }
-//}
-
 /// <summary>
 /// Controls the main game loop, pillar spawning, and singleton access.
 /// </summary>
