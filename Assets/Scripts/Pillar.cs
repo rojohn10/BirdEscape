@@ -70,7 +70,7 @@ public class Pillar : MonoBehaviour
         topPillar.transform.localPosition = new Vector3(0, botY + Gap, 0);
     }
 
-    private void Update()
+    public void Update()
     {
         if (Time.timeScale == 0f)
             return;

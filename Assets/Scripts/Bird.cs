@@ -31,7 +31,7 @@ using UnityEngine;
 //        {
 //            if (Input.touches[0].phase == TouchPhase.Began)
 //            {
-//                //goingUp = true;
+//                goingUp = true;
 //                logicScript.HideHomeScreen();
 //                logicScript.ResumeGame();
 //                GameController.Instance.bird.GoUp();
@@ -84,7 +84,7 @@ public class Bird : MonoBehaviour
     [SerializeField] private LogicScript logicScript;
     [SerializeField] private AudioClip flapSound;
     [SerializeField] private float startingSpeed = 5f;
-    [SerializeField] private float deceleration = 3f;
+    [SerializeField] private float deceleration = 10f;
     [SerializeField] private float rotationSpeed = 300f;
 
     private float currentSpeed = 0f;
@@ -114,6 +114,7 @@ public class Bird : MonoBehaviour
         // Touch input (for mobile)
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
+            goingUp = true;
             logicScript?.HideHomeScreen();
             logicScript?.ResumeGame();
             GoUp();
@@ -148,7 +149,7 @@ public class Bird : MonoBehaviour
         }
         else
         {
-            if (currentSpeed < -10)
+            if (currentSpeed < -1)
             {
                 Quaternion targetRotation = Quaternion.Euler(0, 0, -20);
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);

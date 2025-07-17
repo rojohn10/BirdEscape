@@ -37,7 +37,7 @@ public class FloorScript : MonoBehaviour
     [SerializeField] private float resetPositionX = -5.32f;
     [SerializeField] private float startPositionX = 0f;
 
-    private void Update()
+    public void Update()
     {
         if (Time.timeScale != 1f)
             return;
