@@ -93,7 +93,7 @@ public class Bird : MonoBehaviour
         if (flapSound != null)
             SoundFXManager.Instance?.PlaySoundFXClip(flapSound, transform, 1f);
 
-        rigidBody.velocity = Vector2.up * startingSpeed;
+        rigidBody.linearVelocity = Vector2.up * startingSpeed;
         currentSpeed = startingSpeed;
     }
 

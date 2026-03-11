@@ -49,7 +49,7 @@ public class BirdTests
         yield return null;
 
         // Bird should be going up
-        Assert.Greater(rigidBody.velocity.y, 0);
+        Assert.Greater(rigidBody.linearVelocity.y, 0);
 
         // Current speed should be set to startingSpeed
         float startingSpeed = (float)typeof(Bird).GetField("startingSpeed", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
