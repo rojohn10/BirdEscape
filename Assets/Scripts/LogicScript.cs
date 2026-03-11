@@ -41,7 +41,7 @@ public class LogicScript : MonoBehaviour
     {
         if (gameOverSound != null)
         {
-            SoundFXManager.Instance.PlaySoundFXClip(gameOverSound, transform, 1f);
+            SoundFXManager.Instance?.PlaySoundFXClip(gameOverSound, transform, 1f);
         }
         ShowGameOverScreen();
     }

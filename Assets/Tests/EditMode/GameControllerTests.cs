@@ -33,7 +33,7 @@ public class GameControllerTests
     {
         Object.DestroyImmediate(controllerObject);
         Object.DestroyImmediate(pillarObject);
-        foreach (var pillar in Object.FindObjectsOfType<Pillar>())
+        foreach (var pillar in Object.FindObjectsByType<Pillar>(FindObjectsSortMode.None))
         {
             Object.DestroyImmediate(pillar.gameObject);
         }
@@ -51,9 +51,9 @@ public class GameControllerTests
     [Test]
     public void SpawnPillar_CreatesPillarInstance()
     {
-        int initialCount = Object.FindObjectsOfType<Pillar>().Length;
+        int initialCount = Object.FindObjectsByType<Pillar>(FindObjectsSortMode.None).Length;
         gameController.SpawnPillar();
-        int newCount = Object.FindObjectsOfType<Pillar>().Length;
+        int newCount = Object.FindObjectsByType<Pillar>(FindObjectsSortMode.None).Length;
         Assert.AreEqual(initialCount + 1, newCount);
     }
 
